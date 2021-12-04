@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import HeaderComponent from "./components/HeaderComponent";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import ContenidoComponent from "./components/ContenidoComponent";
+import styled from 'styled-components';
+import Bosquebg from './assets/img/bosquebg.jpg';
+import FooterComponent from "./components/FooterComponent";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <HeaderComponent />
+        <div className="container-sm">
+          <ContenidoComponent />
+        </div>
+        <FooterComponent />
+      </Container>
     </div>
   );
 }
 
 export default App;
+
+const Container = styled.div`
+    background-image: url(${Bosquebg});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+`;
