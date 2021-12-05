@@ -4,7 +4,7 @@ import LogoImg from "../assets/img/logo.jpg";
 function FooterComponent() {
   return (
     <div className="bg-dark px-3">
-      <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+      <footer className="d-flex flex-wrap justify-content-between align-items-center py-4">
         <p className="col-md-4 mb-0 text-muted">
           &copy; Parque Botánico Panamá
         </p>
